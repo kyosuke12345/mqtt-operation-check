@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  broker:
+    build: 
+      context: .
+      dockerfile: Dockerfile-broker
+
+  pub:
+    build:
+      context: .
+      dockerfile: Dockerfile-client
+    tty: true
+
+  sub1:
+    build:
+      context: .
+      dockerfile: Dockerfile-client
+    tty: true
+
+  sub2:
+    build:
+      context: .
+      dockerfile: Dockerfile-client
+    tty: true
